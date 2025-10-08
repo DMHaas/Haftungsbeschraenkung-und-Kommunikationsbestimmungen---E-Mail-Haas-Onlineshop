@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Haas Onlineshop</title>
+  <meta name="description" content="Haftungsbeschränkung und Kommunikationsbestimmungen für den Haas Onlineshop. Impressum, Kontakt und rechtliche Hinweise.">
   <style>
       * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
       }
-      
       body {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           line-height: 1.6;
@@ -18,195 +18,187 @@
           background-color: #f8f9fa;
           padding: 20px;
       }
-      
       .header-nav {
           position: fixed;
           top: 0;
           right: 0;
+          left: 0;
           padding: 15px 25px;
-          background: rgba(255, 255, 255, 0.95);
+          background: rgba(255, 255, 255, 0.97);
           backdrop-filter: blur(10px);
           border-bottom-left-radius: 12px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          border-bottom-right-radius: 12px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
           z-index: 1000;
+          display: flex;
+          justify-content: flex-end;
       }
-      
       .nav-links {
           display: flex;
           gap: 20px;
           align-items: center;
       }
-      
       .nav-links a {
-          color: #495057;
+          color: #1a365d;
           text-decoration: none;
-          font-size: 0.9rem;
+          font-size: 1rem;
           font-weight: 500;
-          transition: color 0.3s ease;
-          padding: 5px 10px;
+          transition: color 0.3s, background 0.3s;
+          padding: 7px 14px;
           border-radius: 5px;
       }
-      
-      .nav-links a:hover {
-          color: #1a365d;
-          background-color: rgba(26, 54, 93, 0.1);
+      .nav-links a:hover, .nav-links a:focus {
+          color: #fff;
+          background-color: #1a365d;
+          outline: none;
       }
-      
       .container {
           max-width: 800px;
-          margin: 60px auto 0;
-          background: white;
-          border-radius: 12px;
+          margin: 80px auto 0;
+          background: #fff;
+          border-radius: 14px;
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
           overflow: hidden;
       }
-      
       .header {
           background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
-          color: white;
-          padding: 40px;
+          color: #fff;
+          padding: 40px 20px 30px 20px;
           text-align: center;
       }
-      
       .header h1 {
           font-size: 2.5rem;
-          font-weight: 300;
-          letter-spacing: 2px;
-          margin-bottom: 10px;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+          margin-bottom: 8px;
       }
-      
       .content {
-          padding: 40px;
+          padding: 40px 32px;
       }
-      
       .section {
           margin-bottom: 35px;
           padding-bottom: 25px;
           border-bottom: 1px solid #e9ecef;
       }
-      
       .section:last-child {
           border-bottom: none;
           margin-bottom: 0;
+          padding-bottom: 0;
       }
-      
       .section-title {
-          font-size: 1.4rem;
+          font-size: 1.25rem;
           font-weight: 600;
           color: #2d3748;
           margin-bottom: 15px;
           padding-left: 15px;
           border-left: 4px solid #1a365d;
       }
-      
       .section-content {
           font-size: 1rem;
           line-height: 1.7;
           color: #4a5568;
           text-align: justify;
       }
-      
       .highlight {
           background-color: #f7fafc;
-          padding: 20px;
+          padding: 18px 20px;
           border-radius: 8px;
           border-left: 4px solid #1a365d;
-          margin: 15px 0;
+          margin: 13px 0;
+          font-size: 0.98rem;
       }
-      
       .email-link {
           color: #1a365d;
           text-decoration: none;
           font-weight: 500;
       }
-      
-      .email-link:hover {
+      .email-link:hover, .email-link:focus {
           text-decoration: underline;
           color: #2c5282;
+          outline: none;
       }
-      
-      @media (max-width: 768px) {
-          body {
-              padding: 10px;
+      @media (max-width: 900px) {
+          .container {
+              margin-top: 70px;
           }
-          
+          .content {
+              padding: 30px 10px;
+          }
+          .header {
+              padding: 30px 10px;
+          }
+      }
+      @media (max-width: 600px) {
+          body {
+              padding: 5px;
+          }
           .header-nav {
-              position: relative;
+              position: static;
               width: 100%;
               border-radius: 0;
-              margin-bottom: 20px;
-              text-align: center;
-          }
-          
-          .nav-links {
               justify-content: center;
-              flex-wrap: wrap;
-              gap: 15px;
+              padding: 12px 0;
           }
-          
           .container {
               margin-top: 0;
+              border-radius: 0;
+              box-shadow: none;
           }
-          
           .header {
-              padding: 30px 20px;
+              padding: 20px 5px;
           }
-          
           .header h1 {
-              font-size: 2rem;
+              font-size: 1.5rem;
           }
-          
           .content {
-              padding: 30px 20px;
+              padding: 20px 5px;
           }
       }
   </style>
 </head>
 <body>
-  <div class="header-nav">
+  <nav class="header-nav" aria-label="Hauptnavigation">
       <div class="nav-links">
-          <a href="mailto:mail@haas-onlineshop.de">Kontakt</a>
-          <a href="https://drive.proton.me/urls/72A3HBV65R#FSwCJ5T8Btu7" target="_blank">Impressum</a>
+          <a href="mailto:mail@haas-onlineshop.de" class="email-link">Kontakt</a>
+          <a href="https://drive.proton.me/urls/72A3HBV65R#FSwCJ5T8Btu7" target="_blank" rel="noopener noreferrer">Impressum</a>
       </div>
-  </div>
-
-  <div class="container">
-      <div class="header">
+  </nav>
+  <main class="container">
+      <header class="header">
           <h1>Haas Onlineshop</h1>
-      </div>
-      
-      <div class="content">
-          <div class="section">
+      </header>
+      <section class="content">
+          <section class="section">
               <h2 class="section-title">Haftungsbeschränkung und Kommunikationsbestimmungen</h2>
-          </div>
-          
-          <div class="section">
+              <div class="section-content">
+                  Im Folgenden finden Sie wichtige rechtliche Hinweise und Bestimmungen zur Kommunikation mit dem Haas Onlineshop.
+              </div>
+          </section>
+          <section class="section">
               <h3 class="section-title">Haftungsausschluss</h3>
               <div class="section-content">
                   <div class="highlight">
-                      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                      Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Jegliche Haftung für Schäden, die direkt oder indirekt aus der Benutzung dieser Website entstehen, wird ausgeschlossen, sofern diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.
                   </div>
               </div>
-          </div>
-          
-          <div class="section">
+          </section>
+          <section class="section">
               <h3 class="section-title">E-Mail Kommunikation</h3>
               <div class="section-content">
                   <div class="highlight">
-                      Informationen in dieser E-Mail stellen keine rechtsverbindlichen Angebote dar, sofern nicht ausdrücklich als solche gekennzeichnet. Vertragsabschlüsse bedürfen einer gesonderten, expliziten Bestätigung.
+                      Informationen in unseren E-Mails stellen keine rechtsverbindlichen Angebote dar, sofern nicht ausdrücklich als solche gekennzeichnet. Vertragsabschlüsse bedürfen einer gesonderten schriftlichen Bestätigung. Bitte beachten Sie, dass die Kommunikation per E-Mail Sicherheitslücken aufweisen kann. Sollten Sie uns vertrauliche Informationen senden wollen, empfehlen wir verschlüsselte Kommunikationswege zu nutzen.
                   </div>
               </div>
-          </div>
-          
-          <div class="section">
+          </section>
+          <section class="section">
               <h3 class="section-title">Vertraulichkeitshinweis</h3>
               <div class="section-content">
                   <div class="highlight">
-                      Diese E-Mail und etwaige Anhänge sind vertraulich und ausschließlich für den angegebenen Adressaten bestimmt. Sollten Sie diese Nachricht irrtümlich erhalten haben, bitten wir Sie höflich um Benachrichtigung per <a href="mailto:mail@haas-onlineshop.de" class="email-link">E-Mail</a> oder Telefon und um die Löschung dieser Nachricht sowie aller Kopien von Ihrem System. Das unerlaubte Kopieren sowie die unbefugte Weitergabe dieser E-Mail sind nicht gestattet.
+                      Diese E-Mail sowie etwaige Anhänge sind vertraulich und ausschließlich für den genannten Adressaten bestimmt. Sollten Sie diese Nachricht irrtümlich erhalten haben, bitten wir Sie, uns umgehend zu informieren und die Nachricht zu löschen. Die unbefugte Weitergabe, Veröffentlichung oder Nutzung ist nicht gestattet.
                   </div>
               </div>
-          </div>
-      </div>
-  </div>
+          </section>
+      </section>
+  </main>
 </body>
 </html>
